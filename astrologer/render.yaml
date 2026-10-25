@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: starlight-astrology-chat
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python astrologer_chatbot.py
+    healthCheckPath: /api/status
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: GEMINI_API_KEY
+        sync: false

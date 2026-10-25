@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#100e1b">
+    <meta name="description" content="A thoughtful astrology chat for cosmic reflection and guidance.">
+    <title>Starlight — Astrology Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Chat options">
+        <a class="brand" href="/" aria-label="Starlight home">
+          <span class="brand-mark" aria-hidden="true">✳</span>
+          <span>starlight</span>
+        </a>
+
+        <button class="new-chat" id="new-chat" type="button">
+          <span aria-hidden="true">＋</span> New conversation
+        </button>
+
+        <div class="sidebar-note">
+          <span class="eyebrow">YOUR COSMIC COMPANION</span>
+          <p>Find a little clarity in the stars, one question at a time.</p>
+          <div class="moon-art" aria-hidden="true">☾</div>
+        </div>
+
+        <div class="sidebar-footer">
+          <span class="online-dot" aria-hidden="true"></span>
+          <span>Here with you, always</span>
+        </div>
+      </aside>
+
+      <main class="chat-panel">
+        <header class="topbar">
+          <div class="mobile-brand">
+            <span class="brand-mark" aria-hidden="true">✳</span> starlight
+          </div>
+          <div class="guide-status">
+            <span class="avatar-small" aria-hidden="true">✦</span>
+            <div>
+              <strong>Your astrologer</strong>
+              <span><i class="online-dot offline-dot" aria-hidden="true"></i> Checking connection...</span>
+            </div>
+          </div>
+          <button class="about-button" id="about-button" type="button">About</button>
+        </header>
+
+        <section class="conversation" aria-label="Chat conversation">
+          <div class="welcome" id="welcome">
+            <div class="welcome-sparkle" aria-hidden="true">✧</div>
+            <p class="eyebrow">A MOMENT FOR YOU</p>
+            <h1>The stars have<br>something to say.</h1>
+            <p class="welcome-copy">Ask about your zodiac sign, relationships, or what the universe might be inviting you to explore.</p>
+
+            <div class="suggestions" aria-label="Suggested questions">
+              <button class="suggestion" type="button" data-prompt="What does my zodiac sign say about me?">
+                <span aria-hidden="true">☼</span> What does my sign say about me?
+              </button>
+              <button class="suggestion" type="button" data-prompt="How can I find my rising sign?">
+                <span aria-hidden="true">☾</span> How do rising signs work?
+              </button>
+              <button class="suggestion" type="button" data-prompt="What should I focus on this week?">
+                <span aria-hidden="true">✧</span> A little guidance for this week
+              </button>
+            </div>
+          </div>
+          <div class="messages" id="messages" aria-live="polite"></div>
+        </section>
+
+        <footer class="composer-area">
+          <form class="composer" id="chat-form">
+            <label class="visually-hidden" for="message-input">Your message</label>
+            <textarea id="message-input" name="message" rows="1" maxlength="2000" placeholder="Ask the stars anything..." required></textarea>
+            <button class="send-button" id="send-button" type="submit" aria-label="Send message">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12 20 4l-5 16-3-7-8-1Zm8 1 8-9"/></svg>
+            </button>
+          </form>
+          <p class="disclaimer">A gentle reminder: astrology is for reflection, not a substitute for professional advice.</p>
+        </footer>
+      </main>
+    </div>
+
+    <dialog class="about-dialog" id="about-dialog">
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="Close">×</button>
+      <span class="dialog-star" aria-hidden="true">✦</span>
+      <h2>A gentle guide to the stars</h2>
+      <p>Starlight offers thoughtful astrology-inspired reflections for curiosity and entertainment. Readings are not scientific predictions, and they can never replace professional medical, legal, financial, or mental-health advice.</p>
+      <p>You can ask general questions without sharing personal details. Birth information is always optional.</p>
+    </dialog>
+  </body>
+</html>
